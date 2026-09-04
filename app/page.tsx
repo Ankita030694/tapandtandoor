@@ -109,7 +109,14 @@ export default function Home() {
             {/* Address */}
             <div className="tracking-wide">
               <span className="font-semibold text-black block mb-0.5">LOCATION</span>
-              128 Maple Street, Toronto (ON)
+              <a 
+                href="https://www.google.com/maps/place/Tap+N+Tandoor+%7C+British+Indian+Sports+Tavern/@43.6653167,-79.46511,17z/data=!3m1!4b1!4m6!3m5!1s0x882b359a1d174da1:0x337e214cdf0e9a7f!8m2!3d43.6653167!4d-79.46511!16s%2Fg%2F11nqtp9wwb!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDkwMS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-black hover:underline transition-colors block"
+              >
+                2865 Dundas St W, Unit 1, Toronto, ON M6P 1Y9
+              </a>
             </div>
 
             {/* Split Grid for Hours & Links */}
@@ -117,29 +124,33 @@ export default function Home() {
               {/* Column 1: Opening Hours */}
               <div className="space-y-2">
                 <div>
-                  <span className="text-[9px] text-neutral-400 block">Wednesday to Sunday</span>
-                  <span className="font-bold text-black text-xs xl:text-sm">12h - 15h30</span>
+                  <span className="text-[9px] text-neutral-400 block uppercase tracking-wider">Tuesday to Sunday</span>
+                  <span className="font-bold text-black text-xs xl:text-sm">12:00 PM – 10:00 PM</span>
                 </div>
                 <div>
-                  <span className="text-[9px] text-neutral-400 block">Tuesday to Sunday</span>
-                  <span className="font-bold text-black text-xs xl:text-sm">17h - 23h00</span>
+                  <span className="text-[9px] text-neutral-400 block uppercase tracking-wider">Monday</span>
+                  <span className="font-bold text-neutral-500 text-xs xl:text-sm">Closed</span>
                 </div>
               </div>
 
               {/* Column 2: Quick Links */}
               <div className="flex flex-col space-y-1 text-xs xl:text-sm">
-                <a href="#jobs" className="hover:text-black hover:underline transition-colors w-fit">Jobs</a>
-                <a href="#contact" className="hover:text-black hover:underline transition-colors w-fit">Contact</a>
-                <a href="#instagram" className="hover:text-black hover:underline transition-colors w-fit">Instagram</a>
-                <a href="#credits" className="hover:text-black hover:underline transition-colors w-fit font-semibold text-neutral-400">Facebook Credits</a>
+                
+                <a href="tel:+16474388445" className="hover:text-black hover:underline transition-colors w-fit">Contact</a>
+                <a 
+                  href="https://www.instagram.com/tapntandoor?igsi=MXZucDQ1cHVoY2JzNA==" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-black hover:underline transition-colors w-fit"
+                >
+                  Instagram
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Footer Line & Credits */}
-          <div className="flex justify-end text-[9px] tracking-widest text-neutral-400 mt-6 lg:mt-2">
-            <a href="#credits" className="hover:text-black transition-colors">CREDITS</a>
-          </div>
+         
+          
 
         </div>
 
