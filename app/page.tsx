@@ -1,16 +1,31 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const images = ["/1.png", "/2.png", "/3.png"];
+  const images = [
+    "/1.png",
+    "/2.png",
+    "/3.png",
+    "/093A1820.jpg",
+    "/093A1899.jpg",
+    "/093A2126.jpg",
+    "/093A2195.jpg",
+    "/093A7314.jpg",
+    "/093A7413.jpg",
+    "/093A7530.jpg",
+    "/093A7581.jpg",
+    "/093A7640.jpg",
+    "/093A7708.jpg",
+  ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+    }, 3500);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -33,7 +48,7 @@ export default function Home() {
         </div>
 
         {/* Left Side: Showcase Image Slideshow (Full-height on desktop, top-aligned on mobile) */}
-        <div className="relative h-[460px] sm:h-[580px] lg:h-full overflow-hidden group min-h-0 w-full">
+        <div className="relative h-[460px] sm:h-[580px] lg:h-full overflow-hidden group min-h-0 w-full bg-neutral-900">
           {images.map((src, index) => (
             <div
               key={src}
@@ -45,7 +60,7 @@ export default function Home() {
                 src={src}
                 alt={`Tap & Tandoor Showcase ${index + 1}`}
                 fill
-                priority={index === 0}
+                priority={index === 0 || index === 1}
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
               />
@@ -81,13 +96,21 @@ export default function Home() {
           <div className="flex flex-col w-full text-sm sm:text-base my-2 lg:my-0">
             <div className="h-[1px] bg-neutral-200 w-full" />
             
-            <a 
-              href="/Tap_N_Tandoor_main%20menu1.pdf" 
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              href="/menu" 
               className="py-3 lg:py-4 text-center text-base lg:text-lg font-bold tracking-[0.25em] hover:tracking-[0.35em] text-[#1a1a1a] hover:text-[#ED1B24] transition-all duration-300 ease-in-out block"
             >
               MENU
+            </Link>
+
+            {/* Small button below MENU for PDF download */}
+            <a
+              href="/Tap_N_Tandoor_main%20menu1.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] sm:text-[11px] text-neutral-500 hover:text-[#ED1B24] tracking-widest uppercase text-center block pb-2 transition-colors font-medium hover:underline"
+            >
+              ↓ Download Menu in PDF
             </a>
             
             <div className="h-[1px] bg-neutral-200 w-full" />
@@ -135,7 +158,6 @@ export default function Home() {
 
               {/* Column 2: Quick Links */}
               <div className="flex flex-col space-y-1 text-xs xl:text-sm">
-                
                 <a href="tel:+16474388445" className="hover:text-black hover:underline transition-colors w-fit">Contact</a>
                 <a 
                   href="https://www.instagram.com/tapntandoor?igsi=MXZucDQ1cHVoY2JzNA==" 
@@ -149,13 +171,9 @@ export default function Home() {
             </div>
           </div>
 
-         
-          
-
         </div>
 
       </div>
     </div>
   );
 }
-
