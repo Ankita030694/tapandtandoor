@@ -167,6 +167,20 @@ export default function Home() {
                 >
                   Instagram
                 </a>
+                <a 
+                  href="mailto:tapntandoor@gmail.com" 
+                  className="hover:text-black hover:underline transition-colors w-fit"
+                >
+                  Email
+                </a>
+                <a 
+                  href="https://www.facebook.com/share/1Cr5oSuTh7/?mibextid=wwXIfr" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-black hover:underline transition-colors w-fit"
+                >
+                  Facebook
+                </a>
               </div>
             </div>
           </div>

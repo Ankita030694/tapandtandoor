@@ -22,6 +22,7 @@ export default function RestaurantSchema() {
       "https://www.tapntandoor.ca/LOGO.jpeg",
     ],
     telephone: "+16474388445",
+    email: "tapntandoor@gmail.com",
     priceRange: "$$",
     currenciesAccepted: "CAD",
     paymentAccepted: "Cash, Credit Card, Debit Card",
@@ -65,6 +66,7 @@ export default function RestaurantSchema() {
     acceptsReservations: "True",
     sameAs: [
       "https://www.instagram.com/tapntandoor",
+      "https://www.facebook.com/share/1Cr5oSuTh7/?mibextid=wwXIfr",
       "https://www.opentable.com/r/tap-n-tandoor-british-indian-sports-tavern-toronto",
       "https://www.tripadvisor.ca/Restaurant_Review-g155019-d34566110-Reviews-Tap_Tandoor_Toronto-Toronto_Ontario.html",
       "https://www.blogto.com/eat_drink/2026/08/tap-tandoor-toronto/",
